@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +16,16 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 90vh;
+
         width: 90vw;
     }
 
     p {
         font-size: 1.5em;
+        color: #ffffff;
+    }
+
+    h2 {
         color: #ffffff;
     }
 
@@ -38,30 +43,82 @@
         background-color: #45a049;
     }
 </style>
+
 <body>
 
-    <p>Your Friend left a message for you </p>
-    <button>Click here to listen</button>
+    <p>Your Friend has a Quiz for you </p>
 
-    <div class="modal">
-        <iframe width="110" height="200" src="https://www.myinstants.com/instant/cid-acp-pradhuman-fasi-64935/embed/" frameborder="0" scrolling="no"></iframe>
-        <p>This is a simple modal dialog.</p>
-        <audio controls autoplay>
-            <source src="https://www.zedge.net/notification-sounds/3af015ca-67a9-4b39-9133-42a306a09a75" type="audio">
-            
-        </audio>
+
+    <audio autoplay id="cid-chut">
+        <source src="https://raw.githubusercontent.com/atif-dev110/randomfun/main/cid-chut.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="amitabh-bachchan-teri-maa-ka-vosda">
+        <source src="https://raw.githubusercontent.com/atif-dev110/randomfun/main/amitabh-bachchan-teri-maa-ka-vosda.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="cid-acp-padhuman-fasi">
+        <source src="https://raw.githubusercontent.com/atif-dev110/randomfun/main/cid-acp-pradhuman-fasi.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="kyu-re-madharchod">
+        <source src="https://raw.githubusercontent.com/atif-dev110/randomfun/main/kyu-re-madharchod.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="cid-madarchod-admi">
+        <source src="https://raw.githubusercontent.com/atif-dev110/randomfun/main/cid-madarchod-admi.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="cid-ke-bakchodi">
+        <source src="https://raw.githubusercontent.com/atif-dev110/randomfun/main/cid-ke-bakchodi.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="kya-cheda-bhosdi">
+        <source src="https://raw.githubusercontent.com/atif-dev110/randomfun/main/kya-cheda-bhosdi.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <div class="cont modi">
+        <h2>Do you like him?</h2>
+        <img src="data:image/webp;base64,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"
+            alt="">
+        <div class="btn">
+            <button onclick="document.getElementById('cid-madarchod-admi').play()">Yes</button>
+            <button onclick="document.getElementById('amitabh-bachchan-teri-maa-ka-vosda').play()">no</button>
+        </div>
+
+    </div>
+    <div class="cont cumatozze">
+        <h2>Do you know her?</h2>
+        <img
+            src="https://th.bing.com/th/id/OIP.zZoSbcO9EwOvebNlWCTtTQHaHa?w=163&h=180&c=7&r=0&o=7&dpr=1.2&pid=1.7&rm=3">
+        <div class="btn">
+            <button onclick="document.getElementById('cid-ke-bakchodi').play()">Yes</button>
+            <button onclick="document.getElementById('kyu-re-madharchod').play()">no</button>
+        </div>
+    </div>
+
+    
+    <div class="cont experience">
+        <h2>Is this website good?</h2>
+        <div class="btn">
+            <button onclick="document.getElementById('cid-acp-pradhuman-fasi').play()">Yes</button>
+            <button onclick="document.getElementById('kya-cheda-bhosdi').play()">no</button>
+        </div>
     </div>
 
 
 
 </body>
+
 </html>
 
 
 
-https://www.myinstants.com/en/instant/kya-cheda-bhosdi-89393/?utm_source=copy&utm_medium=share
+<!-- https://www.myinstants.com/en/instant/kya-cheda-bhosdi-89393/?utm_source=copy&utm_medium=share
 https://www.myinstants.com/en/instant/cid-ke-bakchodi-85882/?utm_source=copy&utm_medium=share
 https://www.myinstants.com/en/instant/kyu-re-madharchod-16542/?utm_source=copy&utm_medium=share
 https://www.myinstants.com/en/instant/cid-madarchod-admi-88657/?utm_source=copy&utm_medium=share
 https://www.myinstants.com/en/instant/cid-chut-59780/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/en/instant/amitabh-bachchan-teri-maa-ka-vosda-22008/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/en/instant/amitabh-bachchan-teri-maa-ka-vosda-22008/?utm_source=copy&utm_medium=share -->
